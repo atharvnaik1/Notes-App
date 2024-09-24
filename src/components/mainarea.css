@@ -1,0 +1,275 @@
+/* Base Styles for Desktop */
+.sidebarContainer {
+  width: 25%; /* Reduced width for desktop screens */
+  height: 100vh;
+  margin-left: 20px;
+  margin-right: 0px;
+  transition: width 0.3s ease-in-out; /* Smooth transition when resizing */
+  position: relative; /* Enable fixed positioning inside */
+}
+
+.heading {
+  color: #000;
+  font-family: Roboto, sans-serif;
+  font-size: 31px;
+  font-weight: bold;
+  letter-spacing: 0.63px;
+  margin-bottom: 30px;
+}
+
+.GroupList {
+  overflow-y: auto;
+  flex-grow: 1; /* Flexible height to adapt to screen size */
+  padding-bottom: 100px; /* Ensure space for floating button */
+}
+
+/* Group Icon and Item */
+.groupIcon {
+  margin-left: 10px;
+  width: 68px;
+  height: 68px;
+  color: #fff;
+  border-radius: 50px;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.groupItem {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.groupItem.selected,
+.groupItem:hover {
+  border-radius: 22px 0px 0px 22px;
+  background-color: #f7ecdc;
+}
+
+.groupName {
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.48px;
+  margin-left: 40px;
+  margin-bottom: 20px;
+}
+
+/* Floating Add Button */
+.AddButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 30px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #d37474;
+  font-size: 28px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.AddButton:hover {
+  background-color: #444;
+}
+
+/* Message Area */
+.MessageAreaContainer {
+  background: #ccdef5;
+  width: calc(100% - 25%); /* Take remaining width after sidebar */
+  height: 100vh;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  transition: width 0.3s ease-in-out; /* Smooth transition when resizing */
+  float: right;
+}
+
+.MessageAreaText {
+  margin-top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.MessageAreaHeading {
+  color: #000;
+  font-family: Roboto, sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-top: 2px;
+  margin-bottom: 10px;
+}
+
+.MessageAreaDescription {
+  color: #292929;
+  text-align: center;
+  font-family: Roboto, sans-serif;
+  font-size: 18px;
+  line-height: 32px;
+  letter-spacing: 0.44px;
+}
+
+.MessageAreaFooter {
+  display: flex;
+  position: absolute;
+  bottom: 20px;
+  right: 32%;
+}
+
+/* Floating Add Button (Mobile) */
+.CreateIconMobile {
+  position: fixed;
+  bottom: 20px; /* Spacing from the bottom */
+  right: 20px; /* Rightmost position */
+  width: 70px; /* Increased width */
+  height: 70px; /* Increased height */
+  border-radius: 50%;
+  background-color: #000; /* Button color */
+  color: #fff; /* Icon color */
+  font-size: 32px; /* Increased icon size */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow effect */
+  transition: background-color 0.3s ease-in-out; /* Smooth transition for hover */
+}
+
+.CreateIconMobile:hover {
+  background-color: #444; /* Darker background on hover */
+}
+
+/* Floating Add Button (Desktop) */
+.CreateIcon {
+  position: absolute; /* Position relative to the sidebar */
+  bottom: 20px; /* Spacing from the bottom */
+  right: 20px; /* Rightmost position */
+  width: 70px; /* Increased width */
+  height: 70px; /* Increased height */
+  border-radius: 50%;
+  background-color: #000; /* Button color */
+  color: #fff; /* Icon color */
+  font-size: 32px; /* Increased icon size */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Shadow effect */
+  transition: background-color 0.3s ease-in-out; /* Smooth transition for hover */
+}
+
+.CreateIcon:hover {
+  background-color: #444; /* Darker background on hover */
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #888;
+}
+
+/* Responsive Media Queries */
+
+/* Tablets and Smaller Devices */
+@media screen and (max-width: 768px) {
+  .sidebarContainer {
+    width: 35%; /* Sidebar reduces to 35% width */
+    height: fit-content; /* Full height for sidebar */
+    margin-left: 0;
+  }
+
+  .MessageAreaContainer {
+    width: 65%; /* Message area takes remaining width */
+    height: 100vh;
+    float: right;
+  }
+
+  .heading {
+    margin-left: 10px;
+    font-size: 28px;
+  }
+
+  .groupName {
+    margin-left: 20px;
+  }
+
+  .MessageAreaHeading {
+    font-size: 28px;
+  }
+
+  .MessageAreaDescription {
+    font-size: 16px;
+  }
+
+  .MessageAreaFooter {
+    bottom: 10px;
+    right: 10%;
+  }
+}
+
+/* Mobile Devices */
+@media screen and (max-width: 480px) {
+  .sidebarContainer {
+    width: 100%; /* Sidebar takes full width on mobile */
+    height: auto;
+    position: static; /* Remove fixed position */
+    z-index: 1;
+  }
+
+  .MessageAreaContainer {
+    width: 100%; /* Message area takes full width */
+    padding-top: 100px; /* Space for banner/header */
+  }
+
+  .heading {
+    font-size: 24px;
+    margin-left: 10px;
+  }
+
+  .groupName {
+    font-size: 16px;
+    margin-left: 10px;
+  }
+
+  .groupIcon {
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+  }
+
+  .MessageAreaHeading {
+    font-size: 24px;
+  }
+
+  .MessageAreaDescription {
+    font-size: 14px;
+  }
+
+  .MessageAreaFooter {
+    right: 5%;
+    bottom: 5px;
+  }
+
+  .AddButton {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+  }
+}

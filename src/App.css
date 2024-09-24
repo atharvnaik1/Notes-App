@@ -1,3 +1,4 @@
+/* Base Styles - General for All Devices */
 .App {
   text-align: center;
 }
@@ -34,5 +35,50 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* Responsive Media Queries */
+
+/* Adjustments for screens larger than 768px (tablets and small desktops) */
+@media screen and (min-width: 768px) {
+  .App-logo {
+    height: 30vmin; /* Slightly smaller logo on larger screens */
+  }
+
+  .App-header {
+    font-size: calc(12px + 2vmin); /* Increase font size for readability on larger screens */
+  }
+}
+
+/* Adjustments for screens larger than 1024px (desktops) */
+@media screen and (min-width: 1024px) {
+  .App-logo {
+    height: 25vmin; /* Further reduce logo size for desktop */
+  }
+
+  .App-header {
+    font-size: calc(14px + 2vmin); /* Slightly larger text for larger screens */
+    padding: 20px;
+  }
+
+  .App-link {
+    font-size: calc(10px + 1.5vmin); /* Adjust link font size for desktops */
+  }
+}
+
+/* Adjustments for mobile devices */
+@media screen and (max-width: 480px) {
+  .App-logo {
+    height: 50vmin; /* Larger logo for smaller screens */
+  }
+
+  .App-header {
+    font-size: calc(8px + 2vmin); /* Smaller font size for mobile */
+    padding: 10px;
+  }
+
+  .App-link {
+    font-size: calc(8px + 1vmin); /* Adjust link font size for smaller screens */
   }
 }
