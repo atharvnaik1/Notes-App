@@ -153,7 +153,12 @@ const NotesArea = (props) => {
                 placeholder="Enter your text here..."
                 onKeyDown={keypress}
               ></textarea>
-              <button type="submit" className={styles.SendButton}>
+              <button type="submit" title='Btn' className={styles.SendButton}
+              style={{marginLeft:'10px', 
+                marginBottom:'7px',
+                blockSize:'22px'
+              }}
+              >
                 <RiSendPlane2Fill className={styles.SendImg} alt="SendImg" />
               </button>
             </form>

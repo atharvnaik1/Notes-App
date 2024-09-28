@@ -37,7 +37,9 @@
 }
 
 /* Notes List */
-.NotesAndDate, .NotesAndDateMobile {
+.NotesAndDate
+ /* .NotesAndDateMobile  */
+ {
   flex: 1; /* Takes up available space */
   overflow-y: auto;
   margin-bottom: 16px;
@@ -51,7 +53,9 @@
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.Text, .TextMobile {
+.Text 
+/* .TextMobile  */
+{
   font-family: 'Arial', sans-serif;
   font-size: 16px;
   color: #333;
@@ -69,11 +73,13 @@
   margin: 0;
 }
 
-.Textarea, .TextareaMobile {
+.Textarea 
+/* .TextareaMobile  */
+{
   position: sticky;
   bottom: 0;
   background-color: white;
-  padding: 8px 16px; /* Adjust padding for better spacing */
+  padding: 8px 16px; 
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -82,7 +88,9 @@
 }
 
 /* Text input adjustment */
-.TextInput, .TextInputMobile {
+.TextInput 
+.TextInputMobile
+ {
   width: 85%;
   padding: 10px;
   height: 50px; /* Smaller height for text area */
@@ -95,7 +103,9 @@
   margin-right: 8px; /* Space between text input and send button */
 }
 
-.TextInput:focus, .TextInputMobile:focus {
+.TextInput:focus
+ .TextInputMobile:focus 
+ {
   border-color: #007bff;
   box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5);
 }
@@ -105,41 +115,32 @@
 }
 
 /* Send Button */
-.SendButton, .SendButtonMobile {
+.SendButton
+ /* .SendButtonMobile  */
+ {
   background-color: #007bff;
   border: none;
-  padding: 12px;
+  padding: 80px;
+  
   border-radius: 50%;
   color: white;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center;
+  justify-content: center; */
   transition: background-color 0.3s ease;
 }
 
-.SendButton:hover, .SendButtonMobile:hover {
+.SendButton:hover
+ .SendButtonMobile:hover 
+ {
   background-color: #0056b3;
 }
 
-.SendImg, .SendImgMobile {
+.SendImg 
+.SendImgMobile
+ {
   font-size: 24px;
 }
-
-
-/* Floating Send Button for better UX on mobile */
-.floatingSendButton {
-  position: absolute;
-  bottom: 16px;
-  right: 16px;
-  background-color: #007bff;
-  color: white;
-  padding: 16px;
-  border-radius: 50%;
-  cursor: pointer;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-}
-
 
 
 /* Mobile Specific Styling */
@@ -155,7 +156,7 @@
 
   .TextInputMobile {
     height: 100px; /* Larger text area for mobile */
-  }
+   } 
 
   .SendButtonMobile {
     width: 48px;
