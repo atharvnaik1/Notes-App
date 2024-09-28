@@ -116,8 +116,9 @@ const Moda = (props) => {
                 </button> */}
               </span>
               <h2 className={styles.modalHeading}>Create New Group</h2>
-              <label className={styles.modalGrp}>Group Name</label>
-              <input
+              <label className={styles.modalGrp}
+              style={{fontWeight:'bold'}}>Group Name</label>
+              <input style={{borderRadius:'25px',padding:'7px',margin:'10px'}}
                 type="text"
                 className={styles.modalText}
                 name="grpName"
@@ -125,7 +126,7 @@ const Moda = (props) => {
                 onChange={handleChange}
               />
               <br />
-              <label className={styles.modalColor}>Choose Colour</label>
+              <label style={{fontWeight:'bold'}} className={styles.modalColor}>Choose Colour</label>
               <div className={styles.Choosecolour}>
                 {color.map((color, index) => (
                   <button
@@ -146,7 +147,12 @@ const Moda = (props) => {
                   ></button>
                 ))}
               </div>
-              <button className={styles.modalCreate} onClick={handleSubmit}>
+              <button className={styles.modalCreate} 
+              style={{borderRadius:'25px',paddingTop:'5px',paddingBottom:'5px',backgroundColor:'darkturquoise',
+                color:'white',fontWeight:'bold',
+                paddingLeft:'15px',paddingRight:'15px'}}
+
+               onClick={handleSubmit}>
                 Create
               </button>
             </div>
